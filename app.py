@@ -23,11 +23,16 @@ data = [
 
 @app.route('/')
 def hello():
-    return "Hello Flask-Herok" 
+    return "Hello ชนิกานต์ สิญญานันท์ เลขที่ 16 ม.4/4" 
 
 @app.route('/api', methods=['GET'])
 def get_api():
     return jsonify(data)
+
+@app.route('/hi')
+@app.route('/hello')
+def hi():
+    return "สวัสดี"
 
 if __name__ == "__main__":
     app.run(debug=False)
